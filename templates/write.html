@@ -1,0 +1,22 @@
+{{ define "write" }}
+
+{{ template "header" }}
+
+<main class="container-sm">
+	<form method="POST" action="/SavePost">
+		<input type="hidden" name="id">
+		<div class="form-group">
+			<label for="inputTitle">Title</label>
+			<input type="email" class="form-control" id="inputTitle">
+		</div>
+		<div class="form-group">
+			<label for="textarea">Content</label>
+    		<textarea class="form-control" id="textarea" rows="3" name="content"></textarea>
+		</div>
+		<button type="submit" class="btn btn-primary">Save</button>
+	</form>
+</main>
+
+{{ template "footer" }}
+
+{{ end }}
